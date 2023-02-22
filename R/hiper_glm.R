@@ -1,5 +1,9 @@
 #' @export
 hiper_glm <- function(design, outcome){
+  supported_model <- c("linear", "logit")
+  if (!(model %in% supported_model)) {
+    stop(sprintf("The model %s is not supported.", model))
+  }
   warning("`hiper_glm` is yet to be implemented.")
   #TODO: implementation
   hglm_out <- list()
